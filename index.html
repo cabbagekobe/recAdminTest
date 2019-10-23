@@ -5,10 +5,47 @@
       管理画面
     </title>
     <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,0">
+	<link rel="stylesheet" type="text/css" href="kai-you.css">
+	<link rel="stylesheet" type="text/css" href="responsive.css">
+	  
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script type="text/javascript" src="move001.js"></script>
+	<script type="text/javascript" src="move002.js"></script>
   </head>
 
   <body>
+  <div class="clearfix">
+	<div class="nav_Container">
+	
+	<div class="NavMenuFloat">
+	<div class="switch open btn001">＋</div>
+	<div class="switch open btn002 close">×</div>
+	<div class="switch content close">
+		<ul>
+          <li><a href="https://administer.kai-you.net/">管理画面トップ</a></li>
+          
+		  <li><a href="https://administer.kai-you.net/">記事投稿</a></li>
+          <li><a href="https://administer.kai-you.net/">記事一覧</a></li>
+          
+          <li><a href="https://administer.kai-you.net/">お知らせの管理</a></li>
+          <li><a href="https://administer.kai-you.net/">問い合わせ一覧</a></li>
+          <li><a href="https://administer.kai-you.net/">広告問い合わせ一覧</a></li>
+
+          <li><a href="https://administer.kai-you.net/">ユーザー一覧</a></li>
+          <li><a href="https://administer.kai-you.net/">コメント一覧</a></li>
+
+          <li><a href="https://administer.kai-you.net/">申請された記事一覧</a></li>
+        </ul>
+	</div>
+	</div>
+		
+		
+		
+		
+		
     <nav role="navigation">
+		
       <h1>
         <a href="https://kai-you.net">
           KAI-YOU.NET
@@ -77,499 +114,697 @@
         </ul>
       </aside>
     </nav>
+	</div>
 
+	  
+	  
+	  
     <main>
       <h1>
         記事編集
       </h1>
 
       <form action="/edit" id="ContentsEditForm" enctype="multipart/form-data" method="post" accept-charset="utf-8">
+	
+	<div class="clearfix999">
+	<div class="main_float">  
+	  <div class="main_left">  
+		
+		<div class="ContentTitleField">
         <label for="ContentTitle">
           記事タイトル
         </label>
-        <input name="data[Content][title]" type="text" value="記事タイトル" id="ContentTitle" required="required"/>
-
-        <label>
-          投稿日時
-        </label>
-        <label for="ContentPublishedYear">
-          年
-        </label>
-        <select name="data[Content][published][year]" id="ContentPublishedYear">
-          <option value="2022"> 2022 </option>
-          <option value="2021"> 2021 </option>
-          <option value="2020"> 2020 </option>
-          <option value="2019"> 2019 </option>
-          <option value="2018"> 2018 </option>
-          <option value="2017"> 2017 </option>
-          <option value="2016"> 2016 </option>
-          <option value="2015"> 2015 </option>
-          <option value="2014"> 2014 </option>
-          <option value="2013"> 2013 </option>
-        </select>
-
-        <label for="ContentPublishedMonth">
-          月
-        </label>
-        <select name="data[Content][published][month]" id="ContentPublishedMonth">
-          <option value="1"> 1 </option>
-          <option value="2"> 2 </option>
-          <option value="3"> 3 </option>
-          <option value="4"> 4 </option>
-          <option value="5"> 5 </option>
-          <option value="6"> 6 </option>
-          <option value="7"> 7 </option>
-          <option value="8"> 8 </option>
-          <option value="9"> 9 </option>
-          <option value="10"> 10 </option>
-          <option value="11"> 11 </option>
-          <option value="12"> 12 </option>
-        </select>
-
-        <label for="ContentPublishedDay">
-          日
-        </label>
-        <select name="data[Content][published][day]" id="ContentPublishedDay">
-          <option value="1"> 1 </option>
-          <option value="2"> 2 </option>
-          <option value="3"> 3 </option>
-          <option value="4"> 4 </option>
-          <option value="5"> 5 </option>
-          <option value="6"> 6 </option>
-          <option value="7"> 7 </option>
-          <option value="8"> 8 </option>
-          <option value="9"> 9 </option>
-          <option value="10"> 10 </option>
-          <option value="11"> 11 </option>
-          <option value="12"> 12 </option>
-          <option value="13"> 13 </option>
-          <option value="14"> 14 </option>
-          <option value="15"> 15 </option>
-          <option value="16"> 16 </option>
-          <option value="17"> 17 </option>
-          <option value="18"> 18 </option>
-          <option value="19"> 19 </option>
-          <option value="20"> 20 </option>
-          <option value="21"> 21 </option>
-          <option value="22"> 22 </option>
-          <option value="23"> 23 </option>
-          <option value="24"> 24 </option>
-          <option value="25"> 25 </option>
-          <option value="26"> 26 </option>
-          <option value="27"> 27 </option>
-          <option value="28"> 28 </option>
-          <option value="29"> 29 </option>
-          <option value="30"> 30 </option>
-          <option value="31"> 31 </option>
-        </select>
-
-        <label id="ContentPublishedHour">
-          時間
-        </label>
-        <select name="data[Content][published][hour]" id="ContentPublishedHour">
-          <option value="0"> 0 </option>
-          <option value="1"> 1 </option>
-          <option value="2"> 2 </option>
-          <option value="3"> 3 </option>
-          <option value="4"> 4 </option>
-          <option value="5"> 5 </option>
-          <option value="6"> 6 </option>
-          <option value="7"> 7 </option>
-          <option value="8"> 8 </option>
-          <option value="9"> 9 </option>
-          <option value="10"> 10 </option>
-          <option value="11"> 11 </option>
-          <option value="12"> 12 </option>
-          <option value="13"> 13 </option>
-          <option value="14"> 14 </option>
-          <option value="15"> 15 </option>
-          <option value="16"> 16 </option>
-          <option value="17"> 17 </option>
-          <option value="18"> 18 </option>
-          <option value="19"> 19 </option>
-          <option value="20"> 20 </option>
-          <option value="21"> 21 </option>
-          <option value="22"> 22 </option>
-          <option value="23"> 23 </option>
-        </select>
-
-        <label for="ContentPublishedMin">
-          分
-        </label>
-        <select name="data[Content][published][min]" id="ContentPublishedMin">
-          <option value="0"> 0 </option>
-          <option value="1"> 1 </option>
-          <option value="2"> 2 </option>
-          <option value="3"> 3 </option>
-          <option value="4"> 4 </option>
-          <option value="5"> 5 </option>
-          <option value="6"> 6 </option>
-          <option value="7"> 7 </option>
-          <option value="8"> 8 </option>
-          <option value="9"> 9 </option>
-          <option value="10"> 10 </option>
-          <option value="11"> 11 </option>
-          <option value="12"> 12 </option>
-          <option value="13"> 13 </option>
-          <option value="14"> 14 </option>
-          <option value="15"> 15 </option>
-          <option value="16"> 16 </option>
-          <option value="17"> 17 </option>
-          <option value="18"> 18 </option>
-          <option value="19"> 19 </option>
-          <option value="20"> 20 </option>
-          <option value="21"> 21 </option>
-          <option value="22"> 22 </option>
-          <option value="23"> 23 </option>
-          <option value="24"> 24 </option>
-          <option value="25"> 25 </option>
-          <option value="26"> 26 </option>
-          <option value="27"> 27 </option>
-          <option value="28"> 28 </option>
-          <option value="29"> 29 </option>
-          <option value="30"> 30 </option>
-          <option value="31"> 31 </option>
-          <option value="32"> 32 </option>
-          <option value="33"> 33 </option>
-          <option value="34"> 34 </option>
-          <option value="35"> 35 </option>
-          <option value="36"> 36 </option>
-          <option value="37"> 37 </option>
-          <option value="38"> 38 </option>
-          <option value="39"> 39 </option>
-          <option value="40"> 40 </option>
-          <option value="41"> 41 </option>
-          <option value="42"> 42 </option>
-          <option value="43"> 43 </option>
-          <option value="44"> 44 </option>
-          <option value="45"> 45 </option>
-          <option value="46"> 46 </option>
-          <option value="47"> 47 </option>
-          <option value="48"> 48 </option>
-          <option value="49"> 49 </option>
-          <option value="50"> 50 </option>
-          <option value="51"> 51 </option>
-          <option value="52"> 52 </option>
-          <option value="53"> 53 </option>
-          <option value="54"> 54 </option>
-          <option value="55"> 55 </option>
-          <option value="56"> 56 </option>
-          <option value="57"> 57 </option>
-          <option value="58"> 58 </option>
-          <option value="59"> 59 </option>
-        </select>
-
-        <label for="ContentWriterId">
-          執筆者
-        </label>
-        <select name="data[Content][writer_id]" id="ContentWriterId">
-          <option value=""> ---------- </option>
-          <option value="1"> 米村 智水 </option>
-          <option value="2"> キャベツこうべ </option>
-          <option value="3"> 新見直 </option>
-          <option value="4"> 恩田 雄多 </option>
-          <option value="5"> 森田将輝 </option>
-          <option value="6"> 和田拓也 </option>
-          <option value="7"> Yuuki Honda </option>
-          <option value="8"> 吉谷篤樹 </option>
-        </select>
-
-        <label for="ContentFeatureId">
-          特集情報
-        </label>
-        <select name="data[Content][feature_id]" id="ContentFeatureId">
-          <option value="0" selected="selected"> ---------- </option>
-          <option value="4"> FANTASTIC EROTICA </option>
-          <option value="3"> 2018年のストリート </option>
-          <option value="2"> インターネット卍ジェニック </option>
-          <option value="1"> 人生を変える&lt;br&gt;カードゲームの魔力 </option>
-        </select>
-
-        <label for="ContentSeriesId">
-          連載情報
-        </label>
-        <select name="data[Content][series_id]" id="ContentSeriesId">
-          <option value="0" selected="selected"> ---------- </option>
-          <option value="7"> ポップな画像を紹介してみた </option>
-          <option value="140"> 「東京ゲームショウ2019」特集 </option>
-          <option value="122"> 写真家Dioraの「その美少女、俺に撮らせろッ！」 </option>
-          <option value="139"> ワンダーフェスティバル 2019[夏] </option>
-          <option value="14"> 渋谷万歳 </option>
-          <option value="3"> POP UP !  </option>
-          <option value="138"> コミックマーケット96 </option>
-          <option value="8"> ポップな動画を紹介してみた </option>
-          <option value="136"> ガール・ミーツ・ストリート </option>
-        </select>
-
-        <label for="ContentCategoryNum">
-          カテゴリー
-        </label>
-        <select name="data[Content][category_num]" id="ContentCategoryNum" required="required">
-          <option value="0" selected="selected"> 未分類 </option>
-          <option value="1"> 本・文芸 </option>
-          <option value="2"> 情報化社会 </option>
-          <option value="3"> アニメ・漫画 </option>
-          <option value="4"> イラスト・アート </option>
-          <option value="5"> 音楽・映像 </option>
-          <option value="6"> ゲーム </option>
-          <option value="7"> ストリート </option>
-          <option value="8"> エンタメ </option>
-        </select>
-
-        <label for="ContentTypeNum">
-          コンテンツフラッグ
-        </label>
-        <select name="data[Content][type_num]" id="ContentTypeNum" required="required">
-          <option value="1" selected="selected"> ニュース記事 </option>
-          <option value="2"> RSS配信有りコンテンツ記事 </option>
-          <option value="3"> RSS配信無しコンテンツ記事 </option>
-        </select>
-
-        <label for="ContentContentType">
-          コンテンツタイプ
-        </label>
-        <select name="data[Content][content_type]" id="ContentContentType">
-          <option value="0"> -- </option>
-          <option value="1"> POP UP！ </option>
-          <option value="2"> コラム </option>
-          <option value="3" selected="selected"> インタビュー </option>
-          <option value="4"> レポート </option>
-          <option value="5"> レビュー </option>
-          <option value="6"> 動画記事 </option>
-        </select>
-
-        <div>
-          <h3>
-            コンテンツ配信先
-          </h3>
-          <label for="ContentContentsDistributionsFlag0">
-            <input type="checkbox" name="data[Content][contentsDistributionsFlag][0]" checked="checked" value="1" id="ContentContentsDistributionsFlag0"/>
-            ニュース媒体1
-          </label>
-          <label for="ContentContentsDistributionsFlag1">
-            <input type="checkbox" name="data[Content][contentsDistributionsFlag][1]" value="1" id="ContentContentsDistributionsFlag1"/>
-            ニュース媒体2
-          </label>
-          <label for="ContentContentsDistributionsFlag2">
-            <input type="checkbox" name="data[Content][contentsDistributionsFlag][2]" value="1" id="ContentContentsDistributionsFlag2"/>
-            ニュース媒体3
-          </label>
-          <label for="ContentContentsDistributionsFlag3">
-            <input type="checkbox" name="data[Content][contentsDistributionsFlag][3]" value="1" id="ContentContentsDistributionsFlag3"/>
-            ニュース媒体4
-          </label>
-          <label for="ContentContentsDistributionsFlag4">
-            <input type="checkbox" name="data[Content][contentsDistributionsFlag][4]" value="1" id="ContentContentsDistributionsFlag4"/>
-            ニュース媒体5
-          </label>
-          <label for="ContentContentsDistributionsFlag5">
-            <input type="checkbox" name="data[Content][contentsDistributionsFlag][5]" checked="checked" value="1" id="ContentContentsDistributionsFlag5"/>
-            ニュース媒体6
-          </label>
-        </div>
-
-        <div>
+        <input name="data[Content][title]" type="text" placeholder="記事タイトルを入力してください" id="ContentTitle" required="required"/>
+		</div>
+		
+		<div class="ContentSummary_all">
+		<div class="ContentSummaryTitle_field">
           <label for="ContentSummaryTitle">
             3行まとめタイトル
           </label>
           <input name="data[Content][summary_title]" maxlength="255" type="text" value="POPなポイントを3行で" id="ContentSummaryTitle"/>
-
+		</div>
+		<div class="ContentSummary_field">
           <label for="ContentSummary">
             3行まとめ
           </label>
-          <textarea name="data[Content][summary]" id="ContentSummary"> </textarea>
+          <textarea name="data[Content][summary]" id="ContentSummary"></textarea>
         </div>
-
+		</div>
+		  
+		<div class="ContentTextField">
         <label for="ContentText">
           テキスト本文
         </label>
-        <textarea name="data[Content][text]" cols="30" rows="6" id="ContentText" required="required"> </textarea>
+        <textarea name="data[Content][text]" cols="30" rows="6" id="ContentText" required="required"></textarea>
+		</div>
 
+		<div class="ContentExternalField">
         <label for="ContentExternal">
           外部スクリプト
         </label>
-        <textarea name="data[Content][external]" cols="30" rows="6" id="ContentExternal"> </textarea>
+        <textarea name="data[Content][external]" cols="30" rows="6" id="ContentExternal"></textarea>
+		</div>
+		 
+	  </div>  
+		 
 
-        <div>
-          <h3>
-            アイキャッチ画像
-          </h3>
+	  <div class="main_right">
+		<div class="submitdiv">
+			<div class="openclose">
+			<dl>
+				<p>公開</p>
+	  			<dt class="open_tit btn-select"></dt>
+				<dd class="open_btn">
+					
+				<div class="OpenBtnFloat">
+				<input name="edit" type="submit" value="下書きとして保存" class="OpenBtnFloatLeft"/>
+        		<input name="preview" type="submit" value="プレビュー" class="OpenBtnFloatRight"/>
+				</div>
+				</dd>
+			</dl>
+			</div>
+		</div>
+					
+					
+		<div class="ContentPublisheddiv clearfix">
+			<div class="openclose">			
+			<dl>		
+			<label for="ContentPublished">投稿日時</label>
+			<dt class="open_tit btn-select"></dt>
+			<dd class="open-btn">
+        	
+        	<select name="data[Content][published][year]" id="ContentPublishedYear">
+          	<option value="2022"> 2022 </option>
+          	<option value="2021"> 2021 </option>
+          	<option value="2020"> 2020 </option>
+          	<option value="2019"> 2019 </option>
+          	<option value="2018"> 2018 </option>
+          	<option value="2017"> 2017 </option>
+          	<option value="2016"> 2016 </option>
+          	<option value="2015"> 2015 </option>
+          	<option value="2014"> 2014 </option>
+          	<option value="2013"> 2013 </option>
+        	</select>
+			<label for="ContentPublishedYear">年</label>
 
-          <img src="https://kai-you.net/press/img/bf6fa21ab9d257b57de2fb168d3fae8b1.jpg" alt="記事タイトル" />
+				
+        	<select name="data[Content][published][month]" id="ContentPublishedMonth">
+          	<option value="1"> 1 </option>
+          	<option value="2"> 2 </option>
+          	<option value="3"> 3 </option>
+          	<option value="4"> 4 </option>
+          	<option value="5"> 5 </option>
+          	<option value="6"> 6 </option>
+          	<option value="7"> 7 </option>
+          	<option value="8"> 8 </option>
+          	<option value="9"> 9 </option>
+          	<option value="10"> 10 </option>
+          	<option value="11"> 11 </option>
+          	<option value="12"> 12 </option>
+        	</select>
+	        <label for="ContentPublishedMonth">月</label>
 
-          <label for="ContentImg">
-            画像URL
-          </label>
-          <input name="data[Content][img]" maxlength="200" type="text" value="http://kai-you.net/press/img/matsukirina.jpg" id="ContentImg"/>
-          <p>
-            画像をアップロードしてから画像URLを取得してそれを貼付けてください。
-          </p>
-        </div>
+        	
+        	<select name="data[Content][published][day]" id="ContentPublishedDay">
+          	<option value="1"> 1 </option>
+          	<option value="2"> 2 </option>
+          	<option value="3"> 3 </option>
+          	<option value="4"> 4 </option>
+          	<option value="5"> 5 </option>
+          	<option value="6"> 6 </option>
+          	<option value="7"> 7 </option>
+          	<option value="8"> 8 </option>
+          	<option value="9"> 9 </option>
+          	<option value="10"> 10 </option>
+          	<option value="11"> 11 </option>
+          	<option value="12"> 12 </option>
+          	<option value="13"> 13 </option>
+          	<option value="14"> 14 </option>
+          	<option value="15"> 15 </option>
+          	<option value="16"> 16 </option>
+          	<option value="17"> 17 </option>
+          	<option value="18"> 18 </option>
+          	<option value="19"> 19 </option>
+          	<option value="20"> 20 </option>
+          	<option value="21"> 21 </option>
+          	<option value="22"> 22 </option>
+          	<option value="23"> 23 </option>
+          	<option value="24"> 24 </option>
+          	<option value="25"> 25 </option>
+          	<option value="26"> 26 </option>
+          	<option value="27"> 27 </option>
+          	<option value="28"> 28 </option>
+          	<option value="29"> 29 </option>
+          	<option value="30"> 30 </option>
+          	<option value="31"> 31 </option>
+        	</select>
+			<label for="ContentPublishedDay">日</label>
 
-        <label for="ContentDescription">
-          キャプション
-        </label>
-        <input name="data[Content][description]" maxlength="2047" type="text" value="まつきりなさん" id="ContentDescription"/>
+				
+        	<select name="data[Content][published][hour]" id="ContentPublishedHour">
+          	<option value="0"> 0 </option>
+          	<option value="1"> 1 </option>
+          	<option value="2"> 2 </option>
+          	<option value="3"> 3 </option>
+          	<option value="4"> 4 </option>
+          	<option value="5"> 5 </option>
+          	<option value="6"> 6 </option>
+          	<option value="7"> 7 </option>
+          	<option value="8"> 8 </option>
+          	<option value="9"> 9 </option>
+          	<option value="10"> 10 </option>
+          	<option value="11"> 11 </option>
+          	<option value="12"> 12 </option>
+          	<option value="13"> 13 </option>
+          	<option value="14"> 14 </option>
+          	<option value="15"> 15 </option>
+          	<option value="16"> 16 </option>
+          	<option value="17"> 17 </option>
+          	<option value="18"> 18 </option>
+          	<option value="19"> 19 </option>
+          	<option value="20"> 20 </option>
+          	<option value="21"> 21 </option>
+          	<option value="22"> 22 </option>
+          	<option value="23"> 23 </option>
+        	</select>
+			<label for="ContentPublishedHour">時間</label>
 
-        <label for="ContentEmbedEyecatch">
-          埋め込みアイキャッチ
-        </label>
-        <textarea name="data[Content][embed_eyecatch]" cols="30" rows="6" id="ContentEmbedEyecatch"> </textarea>
-        <p>
-          上記アイキャッチの代わりに埋め込みコンテンツを表示する。
-          <br>
-          各種サービスの埋め込みhtml（もしくはスクリプト）を入力してください。
-        </p>
+				
+        	<select name="data[Content][published][min]" id="ContentPublishedMin">
+          	<option value="0"> 0 </option>
+          	<option value="1"> 1 </option>
+          	<option value="2"> 2 </option>
+          	<option value="3"> 3 </option>
+          	<option value="4"> 4 </option>
+          	<option value="5"> 5 </option>
+          	<option value="6"> 6 </option>
+          	<option value="7"> 7 </option>
+          	<option value="8"> 8 </option>
+          	<option value="9"> 9 </option>
+          	<option value="10"> 10 </option>
+          	<option value="11"> 11 </option>
+          	<option value="12"> 12 </option>
+          	<option value="13"> 13 </option>
+          	<option value="14"> 14 </option>
+          	<option value="15"> 15 </option>
+          	<option value="16"> 16 </option>
+          	<option value="17"> 17 </option>
+          	<option value="18"> 18 </option>
+          	<option value="19"> 19 </option>
+          	<option value="20"> 20 </option>
+          	<option value="21"> 21 </option>
+          	<option value="22"> 22 </option>
+          	<option value="23"> 23 </option>
+          	<option value="24"> 24 </option>
+          	<option value="25"> 25 </option>
+          	<option value="26"> 26 </option>
+          	<option value="27"> 27 </option>
+          	<option value="28"> 28 </option>
+          	<option value="29"> 29 </option>
+          	<option value="30"> 30 </option>
+          	<option value="31"> 31 </option>
+          	<option value="32"> 32 </option>
+          	<option value="33"> 33 </option>
+         	<option value="34"> 34 </option>
+          	<option value="35"> 35 </option>
+          	<option value="36"> 36 </option>
+          	<option value="37"> 37 </option>
+          	<option value="38"> 38 </option>
+          	<option value="39"> 39 </option>
+         	<option value="40"> 40 </option>
+          	<option value="41"> 41 </option>
+          	<option value="42"> 42 </option>
+          	<option value="43"> 43 </option>
+         	<option value="44"> 44 </option>
+          	<option value="45"> 45 </option>
+          	<option value="46"> 46 </option>
+          	<option value="47"> 47 </option>
+          	<option value="48"> 48 </option>
+          	<option value="49"> 49 </option>
+          	<option value="50"> 50 </option>
+          	<option value="51"> 51 </option>
+          	<option value="52"> 52 </option>
+          	<option value="53"> 53 </option>
+          	<option value="54"> 54 </option>
+          	<option value="55"> 55 </option>
+          	<option value="56"> 56 </option>
+          	<option value="57"> 57 </option>
+          	<option value="58"> 58 </option>
+          	<option value="59"> 59 </option>
+        	</select>
+			<label for="ContentPublishedMin">分</label>
+			
+			</dd>
+			</dl>
+			</div>
+		</div>
 
-        <div>
-          <h3>
-            差し替え画像URL
-          </h3>
 
-          <label for="ContentsImageUrl">
-            画像URL
-          </label>
-          <input name="data[ContentsImage][url]" maxlength="255" type="text" id="ContentsImageUrl"/>
+		<div class="ContentCategorydiv clearfix">
+			<div class="openclose">
+			<dl>
+			<label for="ContentCategory">各種カテゴリー</label>
+			<dt class="open_tit btn-select"></dt>
+			<dd class="open-btn">			
 
-          <label for="ContentsImageSize">
-            resizeのサイズ
-          </label>
-          <select name="data[ContentsImage][size]" id="ContentsImageSize">
+			<div class="ContentWriterId">
+			<label for="ContentWriterId">執筆者</label>
+        	<select name="data[Content][writer_id]" id="ContentWriterId">
+          	<option value=""> ---------- </option>
+          	<option value="1"> 米村 智水 </option>
+          	<option value="2"> キャベツこうべ </option>
+          	<option value="3"> 新見直 </option>
+          	<option value="4"> 恩田 雄多 </option>
+          	<option value="5"> 森田将輝 </option>
+          	<option value="6"> 和田拓也 </option>
+          	<option value="7"> Yuuki Honda </option>
+          	<option value="8"> 吉谷篤樹 </option>
+        	</select>
+			</div>
+
+		  
+		  	<div class="ContentFeatureId">
+        	<label for="ContentFeatureId">特集情報</label>
+        	<select name="data[Content][feature_id]" id="ContentFeatureId">
+          	<option value="0" selected="selected"> ---------- </option>
+          	<option value="4"> FANTASTIC EROTICA </option>
+          	<option value="3"> 2018年のストリート </option>
+          	<option value="2"> インターネット卍ジェニック </option>
+          	<option value="1"> 人生を変えるカードゲームの魔力 </option>
+        	</select>
+			</div>
+
+		  
+		    <div class="ContentSeriesId">
+        	<label for="ContentSeriesId">連載情報</label>
+        	<select name="data[Content][series_id]" id="ContentSeriesId">
+          	<option value="0" selected="selected"> ---------- </option>
+          	<option value="7"> ポップな画像を紹介してみた </option>
+          	<option value="140"> 「東京ゲームショウ2019」特集 </option>
+          	<option value="122"> 写真家Dioraの「その美少女、俺に撮らせろッ！」 </option>
+          	<option value="139"> ワンダーフェスティバル 2019[夏] </option>
+          	<option value="14"> 渋谷万歳 </option>
+          	<option value="3"> POP UP !  </option>
+          	<option value="138"> コミックマーケット96 </option>
+          	<option value="8"> ポップな動画を紹介してみた </option>
+          	<option value="136"> ガール・ミーツ・ストリート </option>
+        	</select>
+			</div>
+
+		  
+		  	<div class="ContentCategoryNum">
+        	<label for="ContentCategoryNum">カテゴリー</label>
+        	<select name="data[Content][category_num]" id="ContentCategoryNum" required="required">
+          	<option value="0" selected="selected"> 未分類 </option>
+          	<option value="1"> 本・文芸 </option>
+          	<option value="2"> 情報化社会 </option>
+          	<option value="3"> アニメ・漫画 </option>
+          	<option value="4"> イラスト・アート </option>
+          	<option value="5"> 音楽・映像 </option>
+          	<option value="6"> ゲーム </option>
+          	<option value="7"> ストリート </option>
+          	<option value="8"> エンタメ </option>
+        	</select>
+			</div>
+
+		    <div class="ContentTypeNum">
+        	<label for="ContentTypeNum">コンテンツフラッグ</label>
+        	<select name="data[Content][type_num]" id="ContentTypeNum" required="required">
+          	<option value="1" selected="selected"> ニュース記事 </option>
+          	<option value="2"> RSS配信有りコンテンツ記事 </option>
+          	<option value="3"> RSS配信無しコンテンツ記事 </option>
+        	</select>
+			</div>
+
+		  
+		  	<div class="ContentContentType">
+        	<label for="ContentContentType">コンテンツタイプ</label>
+        	<select name="data[Content][content_type]" id="ContentContentType">
+          	<option value="0"> -- </option>
+          	<option value="1"> POP UP！ </option>
+          	<option value="2"> コラム </option>
+          	<option value="3" selected="selected"> インタビュー </option>
+          	<option value="4"> レポート </option>
+          	<option value="5"> レビュー </option>
+          	<option value="6"> 動画記事 </option>
+        	</select>
+			</div>
+				
+				
+			</dd>
+			</dl>
+			</div>
+		</div>		
+				
+				
+		  
+		  
+        <div class="ContentContentsdiv">
+			<div class="openclose">
+			<dl>
+          	<h3>コンテンツ配信先</h3>
+			<dt class="open_tit btn-select"></dt>
+			<dd class="open-btn">
+			
+			<ul>
+			<li>
+          	<label for="ContentContentsDistributionsFlag0">
+            <input type="checkbox" name="data[Content][contentsDistributionsFlag][0]" checked="checked" value="1" id="ContentContentsDistributionsFlag0"/>
+            	ニュース媒体1
+          	</label>
+			</li>
+				
+			<li>
+          	<label for="ContentContentsDistributionsFlag1">
+            <input type="checkbox" name="data[Content][contentsDistributionsFlag][1]" value="1" id="ContentContentsDistributionsFlag1"/>
+            	ニュース媒体2
+          	</label>
+			</li>
+				
+			<li>
+          	<label for="ContentContentsDistributionsFlag2">
+            <input type="checkbox" name="data[Content][contentsDistributionsFlag][2]" value="1" id="ContentContentsDistributionsFlag2"/>
+            	ニュース媒体3
+          	</label>
+			</li>
+				
+			<li>
+          	<label for="ContentContentsDistributionsFlag3">
+            <input type="checkbox" name="data[Content][contentsDistributionsFlag][3]" value="1" id="ContentContentsDistributionsFlag3"/>
+            	ニュース媒体4
+          	</label>
+			</li>
+				
+			<li>
+          	<label for="ContentContentsDistributionsFlag4">
+            <input type="checkbox" name="data[Content][contentsDistributionsFlag][4]" value="1" id="ContentContentsDistributionsFlag4"/>
+            	ニュース媒体5
+          	</label>
+			</li>
+				
+			<li>
+          	<label for="ContentContentsDistributionsFlag5">
+            <input type="checkbox" name="data[Content][contentsDistributionsFlag][5]" checked="checked" value="1" id="ContentContentsDistributionsFlag5"/>
+            	ニュース媒体6
+          	</label>
+			</li>
+			</ul>
+			</dd>
+			</dl>
+        	</div>
+		</div>
+		  
+		  
+        <div class="ContentImgdiv">
+			<div class="openclose">
+			<dl>
+	        <h3>アイキャッチ画像</h3>
+			<dt class="open_tit btn-select"></dt>
+			<dd class="open-btn">
+
+			<div class="thumbnail">
+          	<img src="https://kai-you.net/press/img/bf6fa21ab9d257b57de2fb168d3fae8b1.jpg" alt="記事タイトル" />
+			</div>
+			
+			<div class="ContentImgURL">
+          	<label for="ContentImg">
+            	画像URL
+          	</label>
+          	<input name="data[Content][img]" maxlength="200" type="text" value="http://kai-you.net/press/img/matsukirina.jpg" id="ContentImg"/>
+			</div>
+				
+          	<p class="ContentImgdivText001">
+            	画像をアップロードしてから画像URLを取得してそれを貼付けてください。
+          	</p>
+
+			<hr>
+			
+			<div class="ContentDescriptiondiv">
+        	<label for="ContentDescription">
+          		キャプション
+        	</label>
+        	<input name="data[Content][description]" maxlength="2047" type="text" value="まつきりなさん" id="ContentDescription"/>
+			</div>
+
+			<div class="ContentEmbedEyecatchdiv">
+        	<label for="ContentEmbedEyecatch">
+          		埋め込みアイキャッチ
+        	</label>
+        	<textarea name="data[Content][embed_eyecatch]" cols="30" rows="6" id="ContentEmbedEyecatch"></textarea>
+			</div>
+				
+        	<p class="ContentImgdivText002">
+          		上記アイキャッチの代わりに埋め込みコンテンツを表示する。各種サービスの埋め込みhtml（もしくはスクリプト）を入力してください。
+        	</p>
+			</dd>
+			</dl>
+			</div>
+		</div>
+		  
+		
+        <div class="ContentsImageUrldiv">
+			<div class="openclose">
+			<dl>
+          	<h3>差し替え画像URL</h3>
+			<dt class="open_tit btn-select"></dt>
+			<dd class="open-btn">
+
+          	<label for="ContentsImageUrl">
+            	画像URL
+          	</label>
+          	<input name="data[ContentsImage][url]" maxlength="255" type="text" id="ContentsImageUrl"/>
+
+			<div class="ContentsImageSizediv">
+          	<label for="ContentsImageSize">
+            	resizeのサイズ
+          	</label>
+          	<select name="data[ContentsImage][size]" id="ContentsImageSize">
             <option value="c672x416"> 通常 </option>
             <option value="c336x336"> 連載 </option>
-          </select>
+          	</select>
+			</div>
+			</dd>
+			</dl>
+        	</div>
+		</div>
+
+				
+        <div class="ContentCommaSeparatedKeyphrasediv">
+          	<div class="openclose">
+			<dl>
+			<h3>キーフレーズ取得</h3>
+			<dt class="open_tit btn-select"></dt>
+			<dd class="open-btn">
+			
+          	<textarea name="data[Content][commaSeparatedKeyphrase]" id="ContentCommaSeparatedKeyphrase"></textarea>
+          	<p>
+            	, で単語ごとに区切ってください。
+          	</p>
+          	<input type="button" value="キーフレーズ取得" onclick="output()">
+			</dd>
+			</dl>
+        	</div>
         </div>
 
-        <div>
-          <label for="ContentCommaSeparatedKeyphrase">
-            キーフレーズ
-          </label>
-          <textarea name="data[Content][commaSeparatedKeyphrase]" id="ContentCommaSeparatedKeyphrase"> </textarea>
-          <p>
-            , で単語ごとに区切ってください。
-          </p>
-          <input type="button" value="キーフレーズ取得" onclick="output()">
+		  
+		  		  
+        <div class="ContentRelEventHeaderdiv">
+			<div class="openclose">
+			<dl>
+	        <h3>イベント情報</h3>
+			<dt class="open_tit btn-select"></dt>
+			<dd class="open-btn">
+
+	        <label for="ContentRelEventHeader">
+            	イベント情報見出し
+          	</label>
+          	<input name="data[Content][rel_event_header]" maxlength="255" type="text" value="イベント情報" id="ContentRelEventHeader"/>
+
+          	<label for="ContentRelEventName">
+            	イベント名
+          	</label>
+          	<input name="data[Content][rel_event_name]" maxlength="255" type="text" value="" id="ContentRelEventName"/>
+
+          	<label for="ContentRelEventInformation">
+          		イベントインフォメーション
+          	</label>
+          	<textarea name="data[Content][rel_event_information]" id="ContentRelEventInformation"></textarea>
+          	<p>
+            	：で区切ってください。（全角スペース、全角コロン、全角スペース）
+          	</p>
+
+          	<label for="ContentRelEventText">
+            	イベントテキスト
+          	</label>
+          	<textarea name="data[Content][rel_event_text]" id="ContentRelEventText"></textarea>
+
+          	<label for="ContentRelEventStart">
+           		イベント開始
+          	</label>
+          	<input name="data[Content][rel_event_start]" maxlength="255" type="text" value="" id="ContentRelEventStart"/>
+          	<p>
+            	半角の数字のみで入力（例：201501011230で入力すると2015年1月1日12時30分）
+          	</p>
+
+          	<label for="ContentRelEventEnd">
+            	イベント終了
+          	</label>
+          	<input name="data[Content][rel_event_end]" maxlength="255" type="text" value="" id="ContentRelEventEnd"/>
+          	<p>
+            	半角の数字のみで入力（例：201501011230で入力すると2015年1月1日12時30分）
+          	</p>
+
+          	<label for="ContentRelEventArea">
+            	イベントエリア
+          	</label>
+          	<input name="data[Content][rel_event_area]" maxlength="255" type="text" value="" id="ContentRelEventArea"/>
+        	</dd>
+			</dl>
+        	</div>
         </div>
 
-        <div>
-          <h3>
-            イベント情報
-          </h3>
+		
+        <div class="ContentRelLinkListdiv">
+			<div class="openclose">
+         	<dl>
+			<h3>関連リンク</h3>
+			<dt class="open_tit btn-select"></dt>
+			<dd class="open-btn">
+				
+          	<textarea name="data[Content][rel_link_list]" id="ContentRelLinkList"></textarea>
+          	<p>
+				：で区切ってください。（全角スペース、全角コロン、全角スペース）
+          	</p>
+			</dd>
+			</dl>
+        	</div>
+		</div>
 
-          <label for="ContentRelEventHeader">
-            イベント情報見出し
-          </label>
-          <input name="data[Content][rel_event_header]" maxlength="255" type="text" value="イベント情報" id="ContentRelEventHeader"/>
+		  	  
+        <div class="ContentRelInfoNamediv">
+			<div class="openclose">
+			<dl>
+			<h3>人物紹介</h3>
+			<dt class="open_tit btn-select"></dt>
+			<dd class="open-btn">
 
-          <label for="ContentRelEventName">
-            イベント名
-          </label>
-          <input name="data[Content][rel_event_name]" maxlength="255" type="text" value="" id="ContentRelEventName"/>
+          	<label for="ContentRelInfoName">
+            	名前
+          	</label>
+          	<input name="data[Content][rel_info][name]" type="text" id="ContentRelInfoName"/>
 
-          <label>
-            イベントインフォメーション
-          </label>
-          <textarea name="data[Content][rel_event_information]" id="ContentRelEventInformation"> </textarea>
-          <p>
-            　：　で区切ってください。（全角スペース、全角コロン、全角スペース）
-          </p>
+          	<label for="ContentRelInfoSecondName">
+            	第二の名前(読み仮名とか)
+          	</label>
+          	<input name="data[Content][rel_info][second_name]" type="text" id="ContentRelInfoSecondName"/>
 
-          <label>
-            イベントテキスト
-          </label>
-          <textarea name="data[Content][rel_event_text]" id="ContentRelEventText"> </textarea>
+          	<label for="ContentRelInfoPosition">
+            	肩書き
+          	</label>
+          	<input name="data[Content][rel_info][position]" type="text" id="ContentRelInfoPosition"/>
 
-          <label for="ContentRelEventStart">
-            イベント開始
-          </label>
-          <input name="data[Content][rel_event_start]" maxlength="255" type="text" value="" id="ContentRelEventStart"/>
-          <p>
-            半角の数字のみで入力（例：201501011230で入力すると2015年1月1日12時30分）
-          </p>
+          	<label for="ContentRelInfoImage">
+            	紹介画像
+          	</label>
+          	<input type="file" name="data[Content][rel_info][image]" id="ContentRelInfoImage"/>
 
-          <label for="ContentRelEventEnd">
-            イベント終了
-          </label>
-          <input name="data[Content][rel_event_end]" maxlength="255" type="text" value="" id="ContentRelEventEnd"/>
-          <p>
-            半角の数字のみで入力（例：201501011230で入力すると2015年1月1日12時30分）
-          </p>
+          	<textarea name="data[Content][rel_info][info_text]" label="紹介テキスト" id="ContentRelInfoInfoText"></textarea>
+        	</dd>
+			</dl>
+			</div>
+		</div>
 
-          <label for="ContentRelEventArea">
-            イベントエリア
-          </label>
-          <input name="data[Content][rel_event_area]" maxlength="255" type="text" value="" id="ContentRelEventArea"/>
-        </div>
-
-        <div>
-          <label for="ContentRelLinkList">
-            関連リンク
-          </label>
-          <textarea name="data[Content][rel_link_list]" id="ContentRelLinkList"> </textarea>
-          <p>
-            　：　で区切ってください。（全角スペース、全角コロン、全角スペース）
-          </p>
-        </div>
-
-        <div>
-          <h3>
-            人物紹介
-          </h3>
-
-          <label for="ContentRelInfoName">
-            名前
-          </label>
-          <input name="data[Content][rel_info][name]" type="text" id="ContentRelInfoName"/>
-
-          <label for="ContentRelInfoSecondName">
-            第二の名前(読み仮名とか)
-          </label>
-          <input name="data[Content][rel_info][second_name]" type="text" id="ContentRelInfoSecondName"/>
-
-          <label for="ContentRelInfoPosition">
-            肩書き
-          </label>
-          <input name="data[Content][rel_info][position]" type="text" id="ContentRelInfoPosition"/>
-
-          <label for="ContentRelInfoImage">
-            紹介画像
-          </label>
-          <input type="file" name="data[Content][rel_info][image]" id="ContentRelInfoImage"/>
-
-          <textarea name="data[Content][rel_info][info_text]" label="紹介テキスト" id="ContentRelInfoInfoText"> </textarea>
-        </div>
-
-        <div>
-          <h3>
-            各種フラッグ
-          </h3>
-
-          <label>
+		   
+        <div class="EtcFlagdiv">
+			<div class="openclose">
+			<dl>
+	        <h3>各種フラッグ</h3>
+			<dt class="open_tit btn-select"></dt>
+			<dd class="open-btn">
+	        
+			<ul>
+			<li>
+			<label>
             <input type="checkbox" name="data[Content][etc_flag][0]" checked="checked" value="1" id="EtcFlag0"/>
-            各種フラッグ1
-          </label>
-          <label>
+            	各種フラッグ1
+          	</label>
+          	</li>
+			
+			<li>
+			<label>
             <input type="checkbox" name="data[Content][etc_flag][1]" checked="checked" value="1" id="EtcFlag1"/>
-            各種フラッグ2
-          </label>
-          <label>
+            	各種フラッグ2
+          	</label>
+			</li>
+				
+			<li>
+	        <label>
             <input type="checkbox" name="data[Content][etc_flag][2]" checked="checked" value="1" id="EtcFlag2"/>
-            各種フラッグ3
-          </label>
-          <label>
+            	各種フラッグ3
+          	</label>
+			</li>
+				
+			<li>
+	        <label>
             <input type="checkbox" name="data[Content][etc_flag][3]" checked="checked" value="1" id="EtcFlag3"/>
-            各種フラッグ4
-          </label>
-          <label>
+            	各種フラッグ4
+          	</label>
+			</li>
+				
+			<li>
+	        <label>
             <input type="checkbox" name="data[Content][etc_flag][4]" checked="checked" value="1" id="EtcFlag4"/>
-            各種フラッグ5
-          </label>
-        </div>
-
-        <input name="edit" type="submit" value="更新する"/>
-
-        <input name="preview" type="submit" value="更新してそのままプレビューする"/>
-      </form>
+            	各種フラッグ5
+          	</label>
+			</li>
+			</ul>
+			</dd>
+			</dl>
+        	</div>
+	  	</div>
+	
+  	  	</div>
+	  	</div>
+		  
+		</div>
+		
+	</form>
     </main>
+	  
+  </div>  
+	
+			<!--
+			<script type="text/javascript">
+			$(function () {
+			$(".open").click(function(){
+			$(".switch").toggleClass("close");
+			})
+			});
+	  		</script>
+	  		-->
+	  
+	  		<!--
+	  		<script type="text/javascript">
+    		$(document).ready(function() {
+         
+        	$(".open-btn").hide();
+        	$(".btn-select").on("click", function() {
+            $(this).next().slideToggle();
+            $(this).toggleClass("active");//追加部分
+        	});
+         
+        	var windowHeight = (window.innerHeight || document.documentElement.clientHeight || 0);
+ 
+    		});
+	  		</script>
+	  		-->
+	  
+	  
+	  
+	  
+	  
+	  
+	  
   </body>
 </html>
